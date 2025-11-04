@@ -1,0 +1,78 @@
+@mixin flex-center($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  gap: 1rem;
+}
+
+
+
+@mixin button-style($secondary-color, $color-accent) {
+  background-color: $secondary-color;
+  color: $color-accent;
+  border-radius: $btn-radius;
+  padding: 1.2rem 1.9rem;
+  font-weight: $font-weight-medium-500;
+  text-transform: capitalize;
+ 
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+@mixin h1 {
+  font-family: $font-family-Bold;
+  font-size: $font-size-h1;
+  font-weight: $font-weight-bold-700;
+  color: $secondary-color;
+
+}
+
+@mixin h2 {
+  font-family: $font-family-Bold;
+  font-size: $font-size-h2;
+  font-weight: $font-weight-bold-700;
+  color: $secondary-color;
+
+}
+
+@mixin p {
+  font-family: $font-family-Medium;
+  font-size: $font-size-base;
+  color: $text-color;
+
+}
+
+@mixin card($padding: 2rem, $radius: 10px) {
+  background-color: $card-bg;
+  padding: $padding;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  text-align: center;
+}
+
+@mixin subtitle-style($spacing: 1px,
+  $color: #9f9f9f,
+  $size: 17px,
+  $margin: 0.2rem,
+
+) {
+  letter-spacing: $spacing;
+  color: $color;
+  font-size: $size;
+  margin-bottom: $margin;
+  text-transform: uppercase;
+}
+
+@mixin service-box {
+  background-color: #F3F5FC;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  
+}
+

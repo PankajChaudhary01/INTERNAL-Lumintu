@@ -1,0 +1,72 @@
+.services {
+    font-family: $font-family-Medium;
+    padding: 4rem 0;
+
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin-inline: auto;
+    }
+
+    .services-header {
+        @include flex-center(space-between, center);
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+
+        .subtitle1 {
+          @include subtitle-style;
+           
+        }
+
+        h4 {
+          @include h2;
+        }
+
+        .view-all {
+        color: $color-special;
+            text-decoration: none;
+            font-size: $font-size-base;
+            font-weight: 500;
+        }
+    }
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .service-box {
+        @include service-box;
+
+        .icon {
+            background-color: $primary-color;
+            width: 120px;
+            height: 70px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            i {
+                color:$color-accent;
+                font-size: 1.2rem;
+            }
+        }
+
+        .content {
+            h5{
+                font-size: $font-size-h3;
+                color: $secondary-color;
+                font-weight:600;
+                margin-bottom: 0.5rem;
+            }
+
+            p {
+             @include p;
+            }
+        }
+    }
+}

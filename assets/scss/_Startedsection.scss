@@ -1,0 +1,122 @@
+.contact-section {
+    padding: 4rem 0;
+    background-color: $color-accent;
+    font-family: $font-family-Medium;
+
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin-inline: auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 4rem;
+        flex-wrap: wrap;
+    }
+
+    .contact-info {
+        flex: 1;
+        min-width: 300px;
+
+        span {
+            @include subtitle-style;
+        }
+
+        h5 {
+            @include h2;
+            margin-bottom: 1rem;
+        }
+
+        .contact {
+            span {
+                color: $secondary-color;
+                font-size: $font-size-h4;
+                font-weight: $font-weight-bold-700;
+
+            }
+        }
+
+        .info {
+            border-top: 1px solid $text-color;
+            padding-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            .info-item {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                .icon {
+                    background-color: $primary-color;
+                    color: $color-accent;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 6px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.2rem;
+                }
+
+                .details {
+                    h6 {
+                        margin-bottom: 0.2rem;
+                        font-weight: 600;
+                        font-size: map-get($spacers, 3);
+                    }
+
+                    p {
+                        margin: 0;
+                        font-size: $font-size-base;
+                        color: $text-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact-form {
+        flex: 1;
+        min-width: 300px;
+        background-color: #F3F5FC;
+        padding: 2rem;
+        border-radius: 10px;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            label {
+                font-weight: 500;
+                font-size: $font-size-base;
+            }
+
+            input,
+            textarea {
+                padding: 0.8rem 1rem;
+                border: 1px solid $color-accent;
+                border-radius: 6px;
+                outline: none;
+                font-size: $font-size-base;
+
+              
+            }
+
+            button {
+                @include button-style($secondary-color, $color-accent);
+                width: fit-content;
+                border: none;
+
+
+            }
+        }
+    }
+
+    @media (max-width: 992px) {
+        .container {
+            flex-direction: column;
+        }
+    }
+}

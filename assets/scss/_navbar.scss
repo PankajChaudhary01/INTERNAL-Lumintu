@@ -1,0 +1,135 @@
+header {
+  padding: 1rem ;
+  font-family: $font-family-Medium;
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin-inline: auto;
+
+    nav {
+      @include flex-center(space-between, center);
+      position: relative;
+
+      .logo {
+        img {
+          display: block;
+          height: 45px;
+          width: auto;
+          object-fit: contain;
+        }
+      }
+
+      #menu-toggle {
+        display: none;
+      }
+
+      .menu-icon {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+        width: 30px;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+
+        span {
+          width: 30px;
+          height: 4px;
+          background-color: $secondary-color;
+          border-radius: 2px;
+          transform-origin: center;
+          
+        }
+      }
+
+
+      .right-section {
+        @include flex-center(flex-start, center);
+        gap: map-get($spacers, 4);
+
+        .navlinks {
+          @include flex-center(flex-start, center);
+         gap: map-get($spacers, 4);
+
+          .menulink {
+            text-transform: capitalize;
+            color: $text-color;
+            font-size: $font-size-base;
+           
+
+            &.active {
+              color: $color-special;
+              font-weight: $font-weight-medium-500;
+            }
+
+         
+          }
+        }
+
+        .btn {
+          @include button-style($secondary-color, $color-accent);
+        }
+      }
+    }
+  }
+
+
+  @media (max-width:846.9px) {
+    .container {
+      nav {
+        .menu-icon {
+          display: flex;
+        }
+
+        .right-section {
+          position: absolute;
+          top: 90%;
+          right: 1rem;
+          background-color: $color-accent;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 100%;
+          max-width: 220px;
+          padding: map-get($spacers, 3);
+          border-radius: 12px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(-10px);
+          
+
+          .navlinks {
+            flex-direction: column;
+            gap: map-get($spacers, 3);
+            width: 100%;
+          }
+
+          .btn {
+            align-self: center;
+            padding: 0.6rem 1.5rem;
+          }
+        }
+
+        #menu-toggle:checked~.right-section {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+          gap: map-get($spacers,3);
+        }
+
+        #menu-toggle:checked+.menu-icon span:nth-child(1) {
+          transform: rotate(45deg) translate(6px, 7px);
+        }
+
+        #menu-toggle:checked+.menu-icon span:nth-child(2) {
+          opacity: 0;
+        }
+
+        #menu-toggle:checked+.menu-icon span:nth-child(3) {
+          transform: rotate(-45deg) translate(5px, -7px);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,219 @@
+.process {
+    font-family: $font-family-Medium;
+    padding: 4rem 0 3rem;
+    background: $color-accent;
+    color: $secondary-color;
+
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin-inline: auto;
+    }
+
+    .section-header {
+        margin-bottom: 3rem;
+
+        .heading-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .line {
+            flex: 1;
+            height: 1px;
+            background: $text-color;
+        }
+
+        .heading-text {
+            flex: 2;
+
+            .subtitle {
+                @include subtitle-style();
+                margin-bottom: 0.4rem;
+            }
+
+            h2,
+            h3 {
+                @include h2;
+                line-height: 1.3;
+                margin: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .heading-wrapper {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.8rem;
+            }
+
+            .line {
+                width: 60%;
+            }
+        }
+    }
+
+
+    .process-step {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3rem;
+        margin-bottom: 3.5rem;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .process-image {
+            flex: 1;
+
+            img {
+                width: 100%;
+                border-radius: 1rem;
+                object-fit: cover;
+                box-shadow: $shadow;
+                display: block;
+            }
+        }
+
+        .process-content {
+            flex: 1;
+
+            h3 {
+                font-size: 1.8rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+
+                span {
+                    color: #D0DBFF;
+                    font-weight: 700;
+                    font-size: $font-size-h3;
+                    margin-right: 0.5rem;
+                }
+            }
+
+            .points {
+                h4 {
+                    font-size: $font-size-base;
+                    font-weight: 500;
+                    margin-bottom: 0.3rem;
+                    color: $secondary-color;
+
+                    i {
+                        color: $primary-color;
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                    }
+                }
+
+                p {
+                    @include p;
+                    margin-bottom: 1rem;
+                    line-height: 1.6;
+                }
+            }
+        }
+
+        &.reverse {
+            flex-direction: row-reverse;
+
+            .process-content h3 span {
+                margin-left: 0.5rem;
+                margin-right: 0;
+            }
+        }
+    }
+
+
+    .bottom-text {
+        @include flex-center(center, center);
+        flex-direction: column;
+        text-align: center;
+        gap: 0.6rem;
+        margin-top: 0.5rem;
+
+        .bottom-row {
+            @include flex-center(center, center);
+            flex-wrap: wrap;
+            width: 100%;
+            gap: 0.6rem;
+        }
+
+        .line {
+            flex: 1;
+            height: 1px;
+            background: $text-color;
+            min-width: 120px;
+            max-width: 280px;
+        }
+
+        p {
+            flex: 2;
+            color: #555;
+            font-size: $font-size-base;
+            line-height: 1.6;
+            margin: 0;
+            text-align: left;
+        }
+
+        .btn {
+            @include button-style($secondary-color, $color-accent);
+
+        }
+    }
+
+
+
+    @media (max-width: 992px) {
+        .process-step {
+            flex-direction: column;
+            text-align: center;
+            gap: 2rem;
+
+            &.reverse {
+                flex-direction: column;
+            }
+
+            .process-content h3 span {
+                display: block;
+                margin-bottom: 0.3rem;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .bottom-text {
+            .bottom-row {
+                flex-direction: column;
+                gap: 0.8rem;
+               
+            }
+
+            .line {
+                width: 60%;
+                margin: 0 auto;
+            }
+            .bottom-text p {
+            text-align: center;
+
+        }
+        }
+    }
+
+    @media (max-width: 576px) {
+        .section-header h2 {
+            font-size: 1.6rem;
+        }
+
+        .process-step .process-content h3 {
+            font-size: 1.4rem;
+        }
+
+        .bottom-text p {
+            text-align: center;
+
+        }
+    }
+}

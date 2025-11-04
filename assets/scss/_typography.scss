@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'DMSans-Medium', sans-serif;
+    src: url(/assets/fonts/DMSans-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'DMSans-Bold', sans-serif;
+    src: url(/assets/fonts/DMSans-Bold.ttf);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+a {
+  text-decoration:none;
+
+
+}
+
+%title-text {
+  font-size: 14px;
+  font-weight: $font-weight-medium-500;
+  color: $secondary-color;
+}
+
+
+%stat-style {
+  color: $color-accent;
+  font-family: $font-family-Medium;
+
+  h3 {
+    font-size: $font-size-h1;
+    font-weight:$font-weight-bold-700;
+    margin-bottom: 0.3rem;
+  }
+
+  p {
+    font-size: $font-size-base;
+    color:$color-accent;
+    letter-spacing: 0.5px;
+  
+  }
+}
+

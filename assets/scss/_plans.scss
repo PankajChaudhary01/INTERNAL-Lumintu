@@ -1,0 +1,216 @@
+.pricing {
+  font-family: $font-family-Medium;
+  background: $color-accent;
+  color: $text-color;
+  padding: 4rem 0;
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  .pricing-header {
+    @include flex-center(space-between, flex-start);
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+
+    .text-block {
+      .subtitle {
+        @include subtitle-style();
+        margin-bottom: 0.5rem;
+      }
+
+      h2 {
+        @include h2;
+        margin: 0;
+      }
+    }
+
+    .contact {
+      color: $color-special;
+      text-decoration: none;
+      font-size: $font-size-special;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 0.5rem;
+
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+
+ 
+  .pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-items: center;
+
+    .card {
+      background: #f3f5fc;
+      padding: 2rem 1.5rem;
+      border-radius: 1rem;
+      text-align: left;
+      box-shadow: $shadow;
+     
+      width: 100%;
+      max-width: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      min-height: 520px;
+
+      h3 {
+        font-size:24px;
+        font-weight: 700;
+        color: $secondary-color;
+        margin: 0;
+
+        span {
+          font-size:$font-size-base;
+          color: $color-special;
+          font-weight: 400;
+          margin-left: 0.25rem;
+        }
+      }
+
+      h4 {
+        margin: 1rem 0 0.8rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: $secondary-color;
+      }
+
+      
+      .desc {
+        color: $text-color;
+        font-size: $font-size-base;
+        line-height: 1.5;
+        margin-bottom: 1.2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #dce0eb;
+      }
+
+   
+      h5 {
+        letter-spacing: 0.05em;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: $secondary-color;
+        text-transform: uppercase;
+        margin: 1.2rem 0 0.7rem;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1.4rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        flex-grow: 1; 
+
+        li {
+          font-size: $font-size-base;
+          color:$text-color;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+
+          &::before {
+            content: "•";
+            color: $text-color;
+            font-size: 1rem;
+            line-height: 1;
+          }
+        }
+      }
+
+    
+      .btn {
+        width: 100%;
+        padding: 0.8rem;
+        border: none;
+        background: $secondary-color;
+        color: $color-accent;
+        border-radius: 50rem;
+        font-weight: 500;
+        cursor: pointer;
+        text-align: center;
+        margin-top: 1rem; 
+        &:hover {
+          background:$secondary-color;
+        }
+      }
+
+     
+      &:hover {
+        background: $primary-color;
+        color: $color-accent;
+        transform: translateY(-5px);
+
+        h3,
+        h4,
+        h5,
+        span,
+        .desc,
+        ul li {
+          color: $color-accent;
+        }
+
+        .btn {
+          background: $color-accent;
+          color: $secondary-color;
+        }
+      }
+
+    }}
+
+  @media (max-width: 992px) {
+    .pricing-cards {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .pricing-cards {
+      grid-template-columns: 1fr;
+
+      .card {
+        max-width: 350px;
+        min-height: auto; 
+      }
+    }
+
+    .pricing-header {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      gap: 1rem;
+
+      .contact {
+        align-self: center;
+      }
+    }
+  }
+  .card2{
+    background-color:  $primary-color!important;
+    
+  h3,
+  h4,
+  h5,
+  span,
+  .desc,
+  ul li {
+    color: $color-accent!important;
+  }
+
+  .btn {
+    background: $color-accent!important;
+    color: $secondary-color!important;
+  }}
+}
