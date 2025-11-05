@@ -3,7 +3,7 @@
   padding: 60px 0;
   font-family: $font-family-Medium;
 
-  .hero-container {
+  .hero-box {
     max-width: 1200px;
     width: 90%;
     margin-inline: auto;
@@ -27,10 +27,10 @@
     }
   }
 
-  .hero-content {
+  .hero-left {
     flex: 1 1 45%;
 
-    .secure-future {
+    .secure-tag {
       @include subtitle-style();
 
       i {
@@ -55,7 +55,7 @@
       line-height: 1.7;
     }
 
-    .cta-buttons {
+    .hero-buttons {
       display: flex;
       align-items: center;
       gap: 25px;
@@ -68,7 +68,7 @@
         @include button-style($secondary-color, $color-accent);
       }
 
-      .phone-number {
+      .contact-no {
         color: $text-color;
         font-size: $font-size-base;
         display: flex;
@@ -89,7 +89,7 @@
         text-align: center; 
       }
 
-      .cta-buttons {
+      .hero-buttons {
         justify-content: center;
         text-align: center;
       }
@@ -98,7 +98,7 @@
     @media (max-width: 992px) {
       text-align: center;
 
-      .cta-buttons {
+      .hero-buttons {
         flex-direction: column;
         align-items: center;
         margin-bottom: 25px;
@@ -122,7 +122,7 @@
     }
   }
 
-  .hero-image-section {
+  .hero-right {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -195,7 +195,7 @@
       }
     }
 
-    .testimonial-card {
+    .review-card {
       position: absolute;
       bottom: 25px;
       left: 15px;
@@ -239,7 +239,7 @@
         }
       }
 
-      .testimonial-card {
+      .review-card {
         padding: 10px 15px;
       }
     }
@@ -253,7 +253,7 @@
         gap: 20px;
       }
 
-      .testimonial-card {
+      .review-card {
         position: static;
         margin-top: 25px;
       }
