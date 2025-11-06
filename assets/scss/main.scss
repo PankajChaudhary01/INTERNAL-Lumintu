@@ -1,14 +1,21 @@
-@import "./variables";
-@import"./mixin";
-@import "./typography";
-@import"./navbar";
-@import"./hero";
-@import"./about";
-@import"./chooseus";
-@import"./ourservices";
-@import"./statssection";
-@import"./plans";
-@import"./process";
-@import"./Testimonials";
-@import"./Startedsection";
-@import"./footer";
+// --- Base setup 
+@import "./variables";   // Colors, sizing, fonts etc.
+@import "./mixin";       // Helper mixins
+@import "./typography";  // Text styles, headings, body fonts
+
+
+// --- Main layout elements ---
+@import "./navbar";      // Top menu
+@import "./footer";      // Bottom footer
+
+
+// --- Page sections 
+@import "./banner";      // top banner
+@import "./about";       // About section
+@import "./chooseus";    // Why choose us
+@import "./ourservices"; // Services
+@import "./progress";    // Progress 
+@import "./Pricing";       // Pricing plans
+@import "./process";     // steps
+@import "./Testimonials";// Reviews 
+@import "./contact";     // Contact form 

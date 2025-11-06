@@ -1,8 +1,7 @@
 .about {
-  font-family:$font-family-Medium;
-  background-color:$color-accent;
+  font-family: $font-family-Medium;
+  background-color: $color-accent;
   padding: 5rem 0;
- 
 
   .container {
     width: 90%;
@@ -10,14 +9,12 @@
     margin-inline: auto;
   }
 
-
   .about-content {
-  @include flex-center(space-between,center);
+    @include flex-center(space-between, center);
     gap: 3rem;
     flex-wrap: wrap;
-      align-items: stretch;
+    align-items: stretch;
   }
-
 
   .about-images {
     display: flex;
@@ -53,28 +50,26 @@
     }
   }
 
-
   .about-text {
     flex: 1 1 45%;
- 
 
     .subtitle {
-     @include subtitle-style();
+      @include subtitle-style();
     }
 
     h2 {
-    @include h2;
+      @include h2;
     }
 
     .vision {
-      color:$primary-color;
+      color: $primary-color;
       font-weight: 600;
       margin-top: 1rem;
-      font-size:24px;
+      font-size: 24px;
     }
 
     p {
-      color:$text-color;
+      color: $text-color;
       font-size: $font-size-base;
       line-height: 1.7;
       margin-bottom: 1.5rem;
@@ -82,10 +77,9 @@
     }
 
     .btn {
-    @include button-style($secondary-color, $color-accent);
+      @include button-style($secondary-color, $color-accent);
     }
   }
-
 
   .about-logos {
     margin-top: 4rem;
@@ -97,11 +91,8 @@
     gap: 1.5rem;
     padding: 1rem;
     border-bottom: 1px solid #e8ebf9;
-
-    
   }
 
- 
   @media (max-width: 992px) {
     .about-content {
       flex-direction: column;
